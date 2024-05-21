@@ -71,7 +71,7 @@ public class PdfGenerator : IPdfGenerator
         return new FileContentResult(
                 content,
                 "application/pdf")
-            { FileDownloadName = Guid.NewGuid()+".pdf" };
+            { FileDownloadName = PdfGenerationModel.Filename +".pdf" };
     }
     public PdfPCell CreateCell(string text, int fontSize, bool haveBorder = true, bool isbold = false,string hoverUrl="")
     {
